@@ -14,9 +14,10 @@ app.use(bodyParser.urlencoded({
 
     extended: true
 }))
-const MONGO_URL = "mongodb+srv://sayantan:<sayan1>@cluster0.bjy3sst.mongodb.net/portfolio?retryWrites=true&w=majority&appName=Cluster0"
 
-mongoose.connect(MONGO_URL, {
+
+
+mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     
